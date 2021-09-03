@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url('../font/Dosis-Regular.ttf');
+}
+
+.hello {
+    color: orangered;
+    background: url('../images/icon.png');
+    font-family: 'MyFont';
+}
