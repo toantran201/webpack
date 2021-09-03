@@ -1,22 +1,16 @@
-import _ from 'lodash'
-import printMe from './print';
+import _ from "lodash";
 
-function component() {
-    const element = document.createElement("div")
-    const btn = document.createElement('button')
+async function getComponent() {
+    const element = document.createElement("div");
 
-    // Lodash, currently included via a script, is required for this line to work
-    element.innerHTML = _.join(["Hello", "webpack"], " ")
+    const { default: _ } = await import('lodash');
+    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
 
-    btn.innerHTML = 'Click me and check the console!'
-    btn.onclick = printMe
-
-    element.appendChild(btn)
-    return element
+    return element;
 }
 
-document.body.appendChild(component())
-
-
+getComponent().then((component) => {
+    document.body.appendChild(component);
+});
 
 // "webpack": "npx webpack --config webpack.config.js"
