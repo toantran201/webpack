@@ -10,12 +10,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "css-loader": "^6.2.0",
-    "csv-loader": "^3.0.3",
-    "style-loader": "^3.2.1",
     "webpack": "^5.51.2",
-    "webpack-cli": "^4.8.0",
-    "xml-loader": "^1.2.1"
+    "webpack-cli": "^4.8.0"
   },
   "dependencies": {
     "lodash": "^4.17.21"
